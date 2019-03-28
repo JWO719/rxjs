@@ -32,13 +32,13 @@ any way the developer sees fit, but here are some guidelines:
 <!-- skip-example -->
 ```ts
 function mySimpleOperator(someCallback) {
-   // We *could* do a `cosnt self = this;` here to close over, but see next comment
+   // We *could* do a `const self = this;` here to close over, but see next comment
    return Observable.create(subscriber => {
      // because we're in an arrow function `this` is from the outer scope.
      const source = this;
 
      // save our inner subscription
-     cosnt subscription = source.subscribe(value => {
+     const subscription = source.subscribe(value => {
        // important: catch errors from user-provided callbacks
        try {
          subscriber.next(someCallback(value));
@@ -113,7 +113,7 @@ function mySimpleOperator(someCallback) {
   // notice that we return a function here
   return function mySimpleOperatorImplementation(source) {
     return Observable.create(subscriber => {
-      cosnt subscription = source.subscribe(value => {
+      const subscription = source.subscribe(value => {
         try {
           subscriber.next(someCallback(value));
         } catch(err) {
