@@ -37,7 +37,9 @@
     "build-ie-polyfills": "webpack-cli src/ie-polyfills.js -o src/generated/ie-polyfills.min.js --mode production",
     "update-webdriver": "webdriver-manager update --standalone false --gecko false $CHROMEDRIVER_VERSION_ARG",
     "~~build": "ng build --configuration=stable --prod --source-map",
-    "~~clean-generated": "node --eval \"require('shelljs').rm('-rf', 'src/generated')\""
+    "~~clean-generated": "node --eval \"require('shelljs').rm('-rf', 'src/generated')\"",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "engines": {
     "node": ">=10.9"
@@ -56,6 +58,9 @@
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
     "@angular/service-worker": "^8.0.0",
+    "@scullyio/init": "0.0.26",
+    "@scullyio/ng-lib-v8": "latest",
+    "@scullyio/scully": "latest",
     "@stackblitz/sdk": "^1.2.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "classlist.js": "^1.1.20150312",
