@@ -3,9 +3,6 @@ exports.config = {
   projectName: 'site',
   outDir: './dist/static',
   extraRoutes: [
-    '/',
-    '/api',
-    '/operator-decision-tree',
     '/team',
     '/resources',
     '/api/index',
@@ -15,6 +12,7 @@ exports.config = {
     '/guide/operators',
     '/guide/overview'
   ],
+  bareProject: true,
   puppeteerLaunchOptions: {
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   },
