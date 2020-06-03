@@ -6,12 +6,14 @@ import { DiagramStyles } from 'swirly-types';
 import * as SVGO from 'svgo';
 
 const styles: DiagramStyles = {
-    frame_width: 20,
-    completion_height: 20,
+    frame_width: 25,
+    completion_height: 40,
     higher_order_angle: 30,
+    event_radius: 25,
+    operator_height: 55,
     arrow_fill_color: 'black',
-    background_color: 'rgba(255, 255, 255, 0.0)',
-    operator_fill_color: 'rgba(255, 255, 255, 0.0)'
+    background_color: 'transparent',
+    operator_fill_color: 'transparent',
 };
 
 const optimizeXml = async (unoptXml: string): Promise<string> => {
